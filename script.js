@@ -29,3 +29,10 @@ function operate(a, operator, b) {
             divide(a, b);
     }
 }
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        console.log(button.textContent);
+    })
+})
