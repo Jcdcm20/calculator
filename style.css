@@ -42,4 +42,6 @@ button:hover {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    font-size: 2.5em;
+    padding: 10px;
 }
