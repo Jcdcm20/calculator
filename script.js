@@ -30,9 +30,17 @@ function operate(a, operator, b) {
     }
 }
 
+function updateDisplay(value) {
+    displayValue += value;
+    display.innerText = displayValue;
+}
+
+let displayValue = ' '
+const display = document.querySelector('.display');
+
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
-        console.log(button.textContent);
+        updateDisplay(button.textContent);
     })
 })
