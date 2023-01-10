@@ -35,12 +35,13 @@ function updateDisplay(value) {
     display.innerText = displayValue;
 }
 
-let displayValue = ' '
 const display = document.querySelector('.display');
+let displayValue = '';
 
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        updateDisplay(button.textContent);
-    })
+const numbersButtons = document.querySelectorAll('[data-number]');
+const operators = document.querySelectorAll('[data-operators]');
+const equals = document.querySelector('[data-equals]');
+
+numbersButtons.forEach(button => {
+    button.addEventListener('click', () => {updateDisplay(button.textContent)});
 })
