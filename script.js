@@ -35,13 +35,29 @@ function updateDisplay(value) {
     display.innerText = displayValue;
 }
 
+function clear() {
+    displayValue = '';
+    updateDisplay(displayValue);
+}
+
 const display = document.querySelector('.display');
 let displayValue = '';
 
 const numbersButtons = document.querySelectorAll('[data-number]');
-const operators = document.querySelectorAll('[data-operators]');
+const operators = document.querySelectorAll('[data-operator]');
 const equals = document.querySelector('[data-equals]');
+const allClear = document.querySelector('[data-all-clear]');
 
 numbersButtons.forEach(button => {
     button.addEventListener('click', () => {updateDisplay(button.textContent)});
+})
+
+operators.forEach(operator => {
+    operator.addEventListener('click', () => {
+        updateDisplay(operator.textContent);
+    })
+})
+
+allClear.addEventListener('click', () => {
+    clear();
 })
