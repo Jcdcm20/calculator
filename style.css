@@ -18,6 +18,7 @@ button {
     background-color: #e68057;
     border: 1px solid #ffffff;
     font-size: 1.5em;
+    font-family: 'Orbitron', sans-serif;
 }
 
 button:hover {
@@ -46,6 +47,7 @@ button:hover {
     padding: 10px;
     word-break: break-all;
     word-wrap: break-word;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .previous {
