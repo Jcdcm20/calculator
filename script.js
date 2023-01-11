@@ -17,16 +17,16 @@ function divide(a, b) {
 function operate(a, operator, b) {
     switch(operator) {
         case '+':
-            add(a, b);
+            return add(a, b);
             break;
         case '-':
-            subtract(a, b);
+            return subtract(a, b);
             break;
         case '*':
-            multiply(a, b);
+            return multiply(a, b);
             break;
         case '/':
-            divide(a, b);
+            return divide(a, b);
     }
 }
 
@@ -75,6 +75,8 @@ allClear.addEventListener('click', () => {
 })
 
 equals.addEventListener('click', () => {
-    console.log(typeof operate(+firstOperand, operation, +secondOperand));
+    previous.innerText = displayValue;
+    displayValue = '';
+    updateDisplay(operate(+firstOperand, operation, +secondOperand));
 })
 
