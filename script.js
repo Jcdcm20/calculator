@@ -37,6 +37,7 @@ function updateDisplay(value) {
 
 function clear() {
     displayValue = '';
+    previous.innerText = '';
     updateDisplay(displayValue);
 }
 
