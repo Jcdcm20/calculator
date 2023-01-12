@@ -44,6 +44,12 @@ function clear() {
     updateDisplay(displayValue);
 }
 
+function erase() {
+    let temp = displayValue.slice(0, -1);
+    displayValue = '';
+    updateDisplay(temp);
+}
+
 const display = document.querySelector('.display');
 const previous = display.querySelector('.previous');
 const current = display.querySelector('.current');
@@ -55,6 +61,7 @@ const numbersButtons = document.querySelectorAll('[data-number]');
 const operators = document.querySelectorAll('[data-operator]');
 const equals = document.querySelector('[data-equals]');
 const allClear = document.querySelector('[data-all-clear]');
+const del = document.querySelector('[data-del]');
 
 numbersButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -88,3 +95,6 @@ equals.addEventListener('click', () => {
     operation = undefined;
 })
 
+del.addEventListener('click', ()=> {
+    erase();
+})
