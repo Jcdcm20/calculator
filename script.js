@@ -78,6 +78,9 @@ allClear.addEventListener('click', () => {
 equals.addEventListener('click', () => {
     previous.innerText = displayValue;
     displayValue = '';
-    updateDisplay(operate(+firstOperand, operation, +secondOperand));
+    let result = operate(+firstOperand, operation, +secondOperand);
+    updateDisplay(result);
+    firstOperand = result;
+    secondOperand = '';
 })
 
