@@ -25,7 +25,7 @@ function operate(a, operator, b) {
         case '*':
             return multiply(a, b);
             break;
-        case '/':
+        case '÷':
             return divide(a, b);
     }
 }
@@ -85,5 +85,6 @@ equals.addEventListener('click', () => {
     updateDisplay(result);
     firstOperand = result;
     secondOperand = '';
+    operation = undefined;
 })
 
