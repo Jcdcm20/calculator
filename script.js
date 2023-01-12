@@ -38,6 +38,9 @@ function updateDisplay(value) {
 function clear() {
     displayValue = '';
     previous.innerText = '';
+    firstOperand = '';
+    operation = undefined;
+    secondOperand;
     updateDisplay(displayValue);
 }
 
